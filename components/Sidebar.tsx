@@ -1,6 +1,6 @@
 import React from 'react';
 import { LayoutDashboard, UserPlus, Users, Calendar, BadgeDollarSign, LogOut, Menu } from 'lucide-react';
-
+import Logo from '../asset/logo.png';
 interface SidebarProps {
   currentPage: string;
   onNavigate: (page: string) => void;
@@ -24,13 +24,12 @@ export const Sidebar: React.FC<SidebarProps> = ({ currentPage, onNavigate, isCol
         {!isCollapsed ? (
             <div className="text-center">
                 <div className="flex flex-col items-center">
-                   <span className="text-yellow-500 text-3xl font-bold leading-none">☀</span>
-                   <span className="text-blue-900 text-xl font-bold uppercase mt-1">Đồng Tiến</span>
-                   <span className="text-yellow-500 text-[0.6rem] tracking-widest uppercase">Education</span>
+                   <img src={Logo} alt="Đồng Tiến Education" className="w-24 h-auto pt-3 " loading="lazy" decoding="async" />
+                   
                 </div>
             </div>
         ) : (
-             <span className="text-yellow-500 text-3xl font-bold">☀</span>
+          <img src = {Logo} alt="Đồng Tiến Education" className="w-24 h-auto pt-3" loading="lazy" decoding="async" />
         )}
       </div>
 

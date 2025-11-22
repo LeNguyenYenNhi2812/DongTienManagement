@@ -8,7 +8,7 @@ import { Schedule } from './components/views/Schedule';
 import { TuitionView } from './components/views/TuitionView';
 import { AIChat } from './components/AIChat';
 import { PendingPayment } from './types';
-
+import Logo from './asset/logo.png';
 const App: React.FC = () => {
   const [currentPage, setCurrentPage] = useState('dashboard');
   const [isSidebarCollapsed, setIsSidebarCollapsed] = useState(false);
@@ -58,7 +58,7 @@ const App: React.FC = () => {
         <div className="bg-white p-8 rounded-2xl shadow-xl w-full max-w-md border border-gray-100">
            <div className="text-center mb-8">
                <div className="flex justify-center mb-4">
-                   <span className="text-yellow-500 text-6xl font-bold">☀</span>
+                <img src = {Logo} alt="Đồng Tiến Education" className="w-24 h-auto" loading="lazy" decoding="async" />
                </div>
                <h1 className="text-2xl font-bold text-blue-900 uppercase">Đồng Tiến Education</h1>
                <p className="text-gray-500 text-sm mt-2">Hệ thống quản lý giáo dục</p>
